@@ -27,3 +27,6 @@ jobs:
         run:
          make push
       # Runs a set of commands using the runners shell
+      - name: helm version
+        run: helm --version
+  
