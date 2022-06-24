@@ -4,19 +4,11 @@
 
 replicaCount: 1
 
-#image:
- # repository: umadevi8702/task:a1
-  #pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  #tag: ""
 image:
-  repository: umadevi8702/task
-  tag: "a1"
+  repository: umadevi8702/dockrepo
   pullPolicy: IfNotPresent
-  imageCredentials:
-    registry: task
-    username: umadevi8702
-    password: 44c3e917-4ed0-44b6-b444-8b8c1c39e823
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "a1"
 
 imagePullSecrets: []
 nameOverride: "bench"
@@ -45,8 +37,8 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
-  port: 8081
+  type: NodePort
+  port: 80
 
 ingress:
   enabled: false
