@@ -40,6 +40,3 @@ jobs:
       - name: get services
         run: kubectl get services
             # Runs a set of commands using the runners shell
-      - name: curl
-        run: curl http://localhost:80
-          
