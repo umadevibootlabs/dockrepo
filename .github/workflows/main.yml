@@ -39,3 +39,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: get services
         run: kubectl get services
+            # Runs a set of commands using the runners shell
+      - name: curl
+        run: curl https://localhost
+          
