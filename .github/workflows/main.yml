@@ -29,4 +29,13 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: helm version
         run: helm version
-  
+        # Runs a single command using the runners shell
+      - name: minikube start
+        run: 
+         minikube start
+      - name: helm install
+        run:
+         helm upgrade dockimage benchtask/ --values benchtask/values.yaml
+      # Runs a set of commands using the runners shell
+      - name: get services
+        run: kubectl get services
