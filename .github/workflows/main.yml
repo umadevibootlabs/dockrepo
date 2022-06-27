@@ -37,6 +37,12 @@ jobs:
         run:
          helm install dockimage benchtask/ --values benchtask/values.yaml
       # Runs a set of commands using the runners shell
+      
+      - name: Sleep for 300 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+         time: 150s
+         
       - name: get services
         run: kubectl get services
             # Runs a set of commands using the runners shell
